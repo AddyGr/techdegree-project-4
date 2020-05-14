@@ -4,6 +4,7 @@
 
  /**
   * Phrase class
+  * this.letters array added. Used in Game.gameOver().
   * @class
   * @constructor @param {string} [phrase] - the active phrase, passed from the Game constructor (this.phrases)
   */
