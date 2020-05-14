@@ -1,0 +1,235 @@
+/* Main styles */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+/* Variables */
+
+:root {
+  --color-win: #78CF82;
+  --color-lose: #D94545;
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-neutral-light: #D2D2D2;
+  --color-keys: #37474F;
+  --color-keys-light: #E5E5E5;
+  --font-size-large: 60px;
+  --font-size-medium: 20px;
+  --transition: all .2s ease-in-out;
+}
+
+/* main */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  background-color: darkgray;
+}
+
+li, ol, ul {
+  padding: 0;
+  display: inline-block;
+}
+
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: var(--font-size-large);
+  margin: 0;
+  color: black !important;
+  font-family: 'Architects Daughter', cursive;
+  text-shadow: 20px 1px 8px rgb(100, 6, 6) !important;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+button {
+  margin: 6px;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  color: var(--color-keys);
+  font-size: var(--font-size-medium);
+  background-color: var(--color-keys-light);
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+  cursor: grab;
+}
+
+button:active {
+  cursor: grabbing;
+}
+
+#btn__reset {
+	width: 200px;
+  margin: 0 auto;
+  color: rgb(100, 6, 6) !important;
+  background-color: rgb(182, 175, 175);
+  box-shadow: 2px 2px black,
+              -2px 2px black,
+              2px -2px black,
+              -2px -2px black;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  max-height: 900px;
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+}
+
+#phrase ul li{
+  margin-top: 15px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+/* Title */
+
+.header {
+  color: #3a3f58;
+}
+
+
+/* Phrase */
+
+.letter {
+  font-size: var(--font-size-medium);
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  color: transparent;
+  background: var(--color-neutral-light);
+  border-radius: 5px;
+}
+
+.hide {
+  box-shadow:  2px 2px rgb(100, 6, 6),
+              -1px 1px rgb(100, 6, 6),
+              1px -1px rgb(100, 6, 6) !important;
+  transform: translate3d(0,0,0);
+}
+
+.space {
+  width: 15px;
+}
+
+.show {
+  color: #fff;
+  background-color: #4ac0d5;
+  font-size: 20px;
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  border-radius: 5px;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  box-shadow: -.5px .5px black,
+              .5px -.5px black;
+}
+
+/* Keyboard */
+
+.keyrow {
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(10px 5px 7px black);
+}
+
+.chosen {
+  background: #13b35b85;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  color: #FFFFFF;
+}
+
+.wrong {
+  background: #2c02027e;
+  color: #FFFFFF;
+}
+
+.btn__reset {
+  padding: 16px;
+  margin: 50px auto;
+  background: #f7a964;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: solid 4px rgba(0, 0, 0, .3);
+  border-right: solid 3px rgba(0, 0, 0, .3)
+}
+
+.btn__reset:active {
+  padding: 14px 16px 16px 14px;
+  border-bottom: solid 4px rgba(0, 0, 0, 0);
+  border-right: solid 3px rgba(0, 0, 0, 0);
+}
+
+/* Overlay */
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.title {
+  color: #FFF;
+}
+
+.start {
+  background-color: #030303 !important;
+}
+
+.start a {
+  color: rgb(255, 255, 255);
+}
+
+.win {
+  background-color: var(--color-win);
+}
+
+.win a {
+  color: var(--color-win);
+}
+
+.lose {
+  background-color: #f5785f;
+}
+
+.lose a {
+  color: var(--color-lose);
+}
+
+/* Life Icons */
+
+img {
+  filter: drop-shadow(10px 5px 5px black);
+}
+
+img.lostLife {
+  filter: drop-shadow(0px 0px);
+}
